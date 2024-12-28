@@ -17,6 +17,7 @@ else:
     print('Log OK!')
 
 # 3
+print()
 idade = 29
 email = 'germa@yahoo.com.br'
 
@@ -28,7 +29,7 @@ else:
     print('Dados Invalidos, verifique seus dados...')
 
 # 4 (transação suspeita)
-
+print()
 transacao = {'valor': 12000, 'hora': 20}
 
 if (transacao['valor'] > 10000) and (transacao['hora'] > 18):
@@ -50,6 +51,7 @@ for t in texto:
 print(palavras_contadas)
 
 # 6
+print()
 usuarios = [
     {"nome": "Alice", "email": "alice@example.com"},
     {"nome": "Bob", "email": ""},
@@ -59,6 +61,7 @@ usuarios = [
 usuarios_validos = [usuario for usuario in usuarios if usuario["email"]]
 
 print(usuarios_validos)
+print()
 
 # 7
 pagina_atual = 1
@@ -71,6 +74,7 @@ while pagina_atual <= paginas_totais:
 print("Todas as páginas foram processadas.")
 
 # 8
+print()
 itens = [1, 2, 3, "parar", 4, 5]
 
 for item in itens:
@@ -78,3 +82,17 @@ for item in itens:
         print(f'Item encontrado...{item}')
         break
     print(f'Processando item{item}')
+
+# 9
+print()
+for i in range(1, 11):
+    print(i ** 2)
+
+# 10
+print()
+lista = ["Python", "Java", "C++", "JavaScript"]
+
+lista.remove("C++")
+print(lista)
+lista.append("Ruby")
+print(lista)
