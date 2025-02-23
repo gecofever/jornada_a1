@@ -48,6 +48,7 @@ def escrever(msg):
     print('-' * size)
 
 escrever(mensagem)
+print()
 
 # Exercicio 5 - Contador
 
@@ -59,12 +60,37 @@ def contador(inicio, fim, passo):
         passo = -passo  # Ajusta o sinal do passo corretamente
     
     for contagem in range(inicio, fim + (1 if passo > 0 else -1), passo):
-        print(contagem)
-        time.sleep(1)
+        print(f'{contagem} ', end='', flush=True)
+        time.sleep(0.5)
+    print('Fim!')
 
-contador(1, 10, 1)
-contador(10, 1, -2)
+contador(1, 5, 1)
+contador(8, 2, -2)
 inicio = int(input('Inicio: '))
 fim = int(input('Final: '))
 passo = int(input('Passo: '))
 contador(inicio, fim, passo)
+
+
+# Função Maior
+
+print()
+lista_1 = [7, 5, 4, 1, 3]
+lista_2 = [9, 5, 3]
+lista_3 = [8, 3]
+lista_4 = []
+
+def maior(lista):
+    if not lista:
+        print("Sua lista contem 0 numeros. O maior deles é 0.")
+        return
+
+    for numero in lista:
+        print(f'{numero} ', end='', flush=True)
+        time.sleep(1)
+    print(f'Sua lista contem {len(lista)} numeros. O Maior deles é {max(lista)}')
+
+maior(lista_1)
+maior(lista_2)
+maior(lista_3)
+maior(lista_4)
