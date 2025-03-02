@@ -94,3 +94,30 @@ maior(lista_1)
 maior(lista_2)
 maior(lista_3)
 maior(lista_4)
+
+
+# Função Sorteio e Soma Par
+
+import random
+
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print()
+
+def sorteio(lista, quantidade=5):
+    sorteados = []
+    for _ in range(quantidade):
+        elemento = random.choice(lista)
+        sorteados.append(elemento)
+    return sorteados
+
+sorteados = sorteio(numeros)
+print(f'Seus numeros são: {sorteados}')
+
+def somaPar(sorteados):
+    somapar = 0
+    for numero in sorteados:
+        if numero % 2 == 0:
+            somapar += numero
+    print(f'A soma dos pares é {somapar}')
+
+somaPar(sorteados)
