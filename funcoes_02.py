@@ -31,3 +31,22 @@ def fatorial(num=1, show=True):
 
 n = int(input('Digite um numero: '))
 print(fatorial(n, True))
+
+
+# Ficha Jogador
+
+print()
+def ficha(nome='<desconhecido>', gols=0):
+    print(f'O Jogador {nome} marcou {gols} gols')
+
+player_name = input("Informe nome do Jogador: ")
+scored_gols = str(input("Gols marcados: "))
+
+if scored_gols.isnumeric():
+    scored_gols = int(scored_gols)
+else:
+    scored_gols = 0
+if player_name.strip() == '':
+    ficha(gols=scored_gols)
+else:
+    ficha(player_name, scored_gols)
